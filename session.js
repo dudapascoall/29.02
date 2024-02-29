@@ -6,7 +6,7 @@ function enviarSessao() {
 
     let sessao_digitada = sessionStorage.getItem(txt_login.value);
     if (sessao_digitada == null){
-        sessionStorage.getItem(txt_login.value, txt_login.value);
+        sessionStorage.setItem(txt_login.value, txt_login.value);
         console.log("A sessao" + txt_login.value + "foi logada com sucesso.");
         div_sessoes.innerHTML += "<br /> \r\n" + txt_login.value;
     } else {
